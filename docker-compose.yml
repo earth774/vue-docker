@@ -4,8 +4,9 @@ services:
     build:
       context: .
       # target: 'develop-stage' #develop-stage
-      # target: 'build-stage' #build-stage
       target: 'production-stage' #production-stage
     ports:
-    - '8081:80'
+      - '8081:80'
+    restart: always
+    working_dir: /usr/share/nginx/html
     # command: /bin/sh -c "yarn serve"
